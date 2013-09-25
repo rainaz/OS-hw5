@@ -33,7 +33,7 @@ int main(int argc, char** argv){
 				}
 			}
 		}
-		else if(strcmp("getenv",arguments[0])==0){
+		else if(strcmp("getvar",arguments[0])==0){
 			if(arguments[1] == NULL)showenv();
 			else{
 				temp = getenv(arguments[1]);
