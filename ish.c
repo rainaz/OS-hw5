@@ -9,7 +9,7 @@ int main(int argc, char** argv){
 	strcpy(PROMPT, "5431040021 > ");
 	setenv("PROMPT",PROMPT,1);
 	for(;;){
-		fprintf(stdout, "%s",PROMPT);
+		fprintf(stdout, "%s",getenv("PROMPT"));
 		fgets(command, MAXLEN, stdin);
 		if(strcmp(command,EXIT)==0){
 			fprintf(stdout,"Exit Now\n");
