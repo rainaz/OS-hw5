@@ -18,7 +18,7 @@ int main(int argc, char** argv){
 			fprintf(stderr, "Failed to parse command");
 		}
 		if (strcmp("cd",arguments[0])== 0){
-			if(chdir(arguments[1]));
+			if(chdir(arguments[1]))
 				if(chdir(home))fprintf(stdout,"Error\n");
 		}
 		else if(strcmp("getenv",arguments[0])==0){
