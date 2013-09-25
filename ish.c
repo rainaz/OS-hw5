@@ -7,6 +7,7 @@ int main(int argc, char** argv){
 	const char *home = getenv("HOME");
 	char PROMPT[50];
 	strcpy(PROMPT, "5431040021 > ");
+	setenv("PROMPT",PROMPT,1);
 	for(;;){
 		fprintf(stdout, "%s",PROMPT);
 		fgets(command, MAXLEN, stdin);
