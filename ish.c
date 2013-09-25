@@ -19,8 +19,18 @@ int main(int argc, char** argv){
 			fprintf(stderr, "Failed to parse command");
 		}
 		if (strcmp("cd",arguments[0])== 0){
-			if(chdir(arguments[1]))
-				if(chdir(home))fprintf(stdout,"Error\n");
+			if(arguments[1]==NULL){
+				chdir(getenv("HOME"));
+				setenv("PWD",getenv("HOME"),1);
+			}
+			else{
+				if(chdir(arguments[1]))
+					fprintf(stdout,"%s: no such directory",arguments[1]);
+				else{
+					getcwd(cwd,100);
+					setenv("PWD",cwd,1);
+				}
+			}
 		}
 		else if(strcmp("getenv",arguments[0])==0){
 			if(arguments[1] == NULL)showenv();
