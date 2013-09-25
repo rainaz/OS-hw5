@@ -3,6 +3,7 @@ int main(int argc, char** argv){
 	char command[MAXLEN];
 	char **arguments;
 	char *temp;
+	char cwd[100];
 	int parse;
 	const char *home = getenv("HOME");
 	char PROMPT[50];
