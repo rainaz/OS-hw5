@@ -22,6 +22,7 @@ void showenv(){
 	for(;environ[i]!=NULL;i++){
 		printf("%s\n",environ[i]);
 	}
+	//unknow
 }
 
 int tokenize(char *string, char *delimiters, char ***arrayOfTokens) {
